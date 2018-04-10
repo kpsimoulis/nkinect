@@ -43,7 +43,7 @@ before_install:
     fi
   - if [ ! -d session ]; then
         echo "Downloading fakenect sample session";
-        wget "https://s3.us-east-2.amazonaws.com/rubeniskov/fakenect.sample.tar.gz" -O - | tar -xz;
+        wget "https://bitbucket.org/openiss/public/downloads/test-recording.tar.bz2" -O - | tar -jxvf;
     fi
 install:
   - npm install
