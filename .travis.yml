@@ -3,8 +3,6 @@ os:
   - linux
   - osx
 dist: trusty
-notifications:
-  slack: rubeniskov:I82ZGuYOEQrhl29wBbQFEdjP#nkinect
 cache:
   bundler: true
   directories:
@@ -43,7 +41,8 @@ before_install:
     fi
   - if [ ! -d session ]; then
         echo "Downloading fakenect sample session";
-        wget "https://bitbucket.org/openiss/public/downloads/test-recording.tar.bz2" -O - | tar -jxv && mv test-recording session;
+        wget "https://bitbucket.org/openiss/public/downloads/test-recording.tar.bz2" -O - | tar -jxv;
+        mv test-recording session;
     fi
 install:
   - npm install
