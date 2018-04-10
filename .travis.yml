@@ -38,7 +38,12 @@ before_install:
   - if [ ! -d session ]; then
         echo "Downloading fakenect sample session";
         wget "https://bitbucket.org/openiss/public/downloads/test-recording.tar.bz2" -O - | tar -jxv;
+        echo "Checking files";
+        ls -l;
+        pwd;
         mv test-recording session;
+        echo "Checking files after";
+        ls -l;
     fi
 install:
   - npm install
