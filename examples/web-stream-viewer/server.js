@@ -1,4 +1,4 @@
-var kinect = require('../../')();
+var kinect = require('nkinect')();
 var jpegJs = require('jpeg-js')
 var through = require('through')
 var bodyParser = require('body-parser');

@@ -5,14 +5,11 @@ case "$(uname -s)" in
     Linux*)
         echo "Linux OS detected"
         LD_PRELOAD="/usr/local/lib/fakenect/libfakenect.so" \
-        FAKENECT_PATH="$HOME/session" \
         ${@:1}
     ;;
     Darwin*)
         echo "Mac OS detected"
-        DYLD_INSERT_LIBRARIES="/Users/kosta/src/OpenISS/libfreenect/build/lib/fakenect/libfakenect.dylib" \
-        DYLD_FORCE_FLAT_NAMESPACE=y \
-        FAKENECT_PATH="$HOME/session" \
+        DYLD_INSERT_LIBRARIES="/Users/kosta/src/OpenISS/libfreenect/build/lib/libfreenect.dylib" \
         ${@:1}
     ;;
     *)

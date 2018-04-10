@@ -262,7 +262,7 @@ void ProcessEventsLoop(){
 
             // printf("%d \n", /*state.tilt_angle,*/ this->state->tilt_angle);
             // printf("%d \n", /*state.tilt_angle,*/ this->GetTiltAngle());
-            printf("%d <-> %d\n", tilt_angle,  this->state->tilt_angle);
+//            printf("%d <-> %d\n", tilt_angle,  this->state->tilt_angle);
         }
 }
 
